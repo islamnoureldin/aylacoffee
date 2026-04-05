@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@theme {
+  --font-playfair: var(--font-playfair);
+  --font-lato: var(--font-lato);
+}
+
+@utility font-playfair {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+@utility font-lato {
+  font-family: var(--font-lato), system-ui, sans-serif;
+}
+
+@utility ayla-bg {
+  background-color: #faf7f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-lato), system-ui, sans-serif;
+}
