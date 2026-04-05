@@ -1,16 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --font-playfair: var(--font-playfair);
-  --font-lato: var(--font-lato);
+  --font-cairo: var(--font-cairo);
 }
 
-@utility font-playfair {
-  font-family: var(--font-playfair), Georgia, serif;
-}
-
-@utility font-lato {
-  font-family: var(--font-lato), system-ui, sans-serif;
+@utility font-cairo {
+  font-family: var(--font-cairo), "Segoe UI", Tahoma, Arial, sans-serif;
 }
 
 @utility ayla-bg {
@@ -22,5 +17,5 @@ html {
 }
 
 body {
-  font-family: var(--font-lato), system-ui, sans-serif;
+  font-family: var(--font-cairo), "Segoe UI", Tahoma, Arial, sans-serif;
 }

@@ -1,23 +1,17 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import { Cairo } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
-});
-
-const lato = Lato({
-  variable: "--font-lato",
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
+const cairo = Cairo({
+  variable: "--font-cairo",
+  subsets: ["arabic", "latin"],
+  weight: ["300", "400", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "AYLA Coffee – Premium Coffee Solutions for Cafes & Businesses",
+  title: "AYLA Coffee – حلول قهوة فاخرة للمقاهي والشركات",
   description:
-    "AYLA Coffee specializes in supplying premium coffee to cafes and restaurants. Consistent quality, carefully selected roasts, and reliable supply.",
+    "AYLA Coffee تتخصص في توريد القهوة للمقاهي والمطاعم بجودة ثابتة وأنواع مختارة بعناية. مذاق ثابت وتوريد منتظم.",
 };
 
 export default function RootLayout({
@@ -26,10 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${playfair.variable} ${lato.variable} antialiased`}>
-        {children}
-      </body>
+    <html lang="ar" dir="rtl">
+      <body className={`${cairo.variable} antialiased`}>{children}</body>
     </html>
   );
 }
